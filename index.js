@@ -57,7 +57,7 @@ client.on("messageCreate", message => {
 client.on("messageCreate", message => {
     if (message.content.startsWith("*clear")) {
         if (!message.member.permissions.has("MANAGE_MESSAGES")) {
-            return message.channel.send('Non hai il permesso');
+            return message.channel.send('Non hai il permesso!');
         }
         if (!message.guild.me.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send('Non ho il permesso');
