@@ -13,3 +13,18 @@ client.on('ready', () => {
     });
     client.user.setStatus('online') 
 })
+client.on("messageCreate", message => {
+   if(message.content == "verifica closet"){
+        message.delete()
+        message.member.roles.add("943179860061327390");
+   }
+})
+client.on("messageCreate", message => {
+    if (message.content == "!comando") {
+        const embed = new Discord.MessageEmbed()
+            .setTitle("**VERIFICA CLOSET!**") //Titolo
+            .setDescription("** � Per verificarti scrivi verifica closet
+                                � To verify yourself write closet verification**") 
+        message.channel.send({embeds: [embed]})
+    }
+})
