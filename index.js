@@ -19,8 +19,8 @@ client.on("messageCreate", message => {
         message.member.roles.add("943179860061327390");
    }
 })
-   if (message.content.startsWith("!userinfo")) {
-        if (message.content == "*userinfo") {
+   if (message.content.startsWith("*userinfo")) {
+        if (message.content == "!userinfo") {
             var utente = message.member;
         }
         else {
