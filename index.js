@@ -70,7 +70,7 @@ client.on("messageCreate", message => {
             return message.channel.send("Non puoi cancellare più di 100 messaggi")
         }
         message.channel.bulkDelete(count, true)
-        message.channel.send(count + "__**Messaggi Cancellati!").then(msg => {
+        message.channel.send(count + "__**Messaggi Cancellati!**__").then(msg => {
             setTimeout(() => msg.delete(), 5000)
         })
     }
