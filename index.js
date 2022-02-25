@@ -20,8 +20,8 @@ client.on("messageCreate", message => {
    }
 })
 client.on("messageCreate", message => {
-    if (message.content.startsWith("!userinfo")) {
-        if (message.content == "*userinfo") {
+    if (message.content.startsWith("*userinfo")) {
+        if (message.content == "!userinfo") {
             var utente = message.member;
         }
         else {
