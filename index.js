@@ -19,3 +19,18 @@ client.on("messageCreate", message => {
         message.member.roles.add("943179860061327390");
    }
 })
+   if (message.content.startsWith("!userinfo")) {
+        if (message.content == "*userinfo") {
+            var utente = message.member;
+        }
+        else {
+            var utente = message.mentions.members.first();
+        }
+        if (!utente) {
+            return message.channel.send("Non ho trovato questo utente")
+        }
+        var elencoPermessi = "";
+        if (utente.permissions.has("ADMINISTRATOR")) {
+            elencoPermessi = "👑 ADMINISTRATOR";
+        }
+        else {
