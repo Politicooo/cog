@@ -14,12 +14,6 @@ client.on('ready', () => {
     client.user.setStatus('online') 
 })
 client.on("messageCreate", message => {
-   if(message.content == "verifica closet"){
-        message.delete()
-        message.member.roles.add("943179860061327390");
-   }
-})
-client.on("messageCreate", message => {
     if (message.content.startsWith("*userinfo")) {
         if (message.content == "!userinfo") {
             var utente = message.member;
