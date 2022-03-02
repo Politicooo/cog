@@ -160,7 +160,6 @@ client.on('ready', () => {
     });
     client.user.setStatus('online')
 })
-è come creare un comando tipo:
 client.on("messageCreate", message => {
    if(message.content == "closet verify"){
         message.delete()
